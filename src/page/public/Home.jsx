@@ -5,16 +5,18 @@ import CourseCards from './CourseCard';
 import Number from './Number';
 import PopularShortTerms from './PopularShortTerms';
 import OurClient from './OurClient';
+import Placement from './Placement';
 
 const Home = () => {
   return (
     <>
-      <Typography mt={10} variant='h4'></Typography>
+      
       <Banner  />
       <CourseCards />
       <Number />
       <PopularShortTerms />
       <OurClient />
+      <Placement/>
     </>
   )
 }

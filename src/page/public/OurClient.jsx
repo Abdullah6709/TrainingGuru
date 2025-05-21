@@ -28,7 +28,7 @@ const OurClient = () => {
 
   return (
 <>
-     <Box textAlign="center" py={5}>
+     <Box textAlign="center" py={2}>
               <Typography variant="h4" fontWeight="bold" gutterBottom>
                 Our Clients
               </Typography>

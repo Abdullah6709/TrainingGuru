@@ -15,6 +15,7 @@ const Banner = () => {
       sx={{
         flexGrow: 1,
         p: 4,
+        mt:10,
         py: 5,
         px: { xs: 2, sm: 3, md: 12, lg: 12 },
         backgroundColor: '#0d6efd',
