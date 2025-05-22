@@ -44,14 +44,14 @@ function PublicAppBar() {
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", p: 2 }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", p: 2, bgcolor:"#0d6efd", color:"#fff" }}>
       <Box
         onClick={handleClick}
         sx={{ display: "flex", justifyContent: "center", mb: 2 }}
       >
-        <Typography variant="h6" color="#62D2A2" fontWeight="bold">
-          VestalCare
-        </Typography>
+       <Box  onClick={handleClick} display="flex" alignItems="center" gap={2}>
+            <img src={Nav} alt="Logo" style={{ height: 40 }} />
+          </Box>
       </Box>
       <Divider />
       <List>
@@ -62,7 +62,7 @@ function PublicAppBar() {
               to={item.path}
               sx={{
                 textAlign: "center",
-                "&:hover": { backgroundColor: "#62D2A2" },
+                "&:hover": { backgroundColor: "#fff" },
               }}
             >
               <ListItemText primary={item.label} />
@@ -75,7 +75,7 @@ function PublicAppBar() {
             to="/login"
             sx={{
               textAlign: "center",
-              "&:hover": { backgroundColor: "#62D2A2" },
+              "&:hover": { backgroundColor: "#fff" },
             }}
           >
             <ListItemText primary="Login" />
@@ -87,7 +87,7 @@ function PublicAppBar() {
             to="/signup"
             sx={{
               textAlign: "center",
-              "&:hover": { backgroundColor: "#62D2A2" },
+              "&:hover": { backgroundColor: "#fff" },
             }}
           >
             <ListItemText primary="Signup" />
@@ -162,7 +162,7 @@ function PublicAppBar() {
                     bottom: "-5px",
                     width: location.pathname === item.path ? "90%" : "0%",
                     height: "2px",
-                    backgroundColor: "#62D2A2",
+                    backgroundColor: "#fff",
                     transition: "width 0.3s ease-in-out",
                   },
                   "&:hover::after": {
@@ -180,11 +180,11 @@ function PublicAppBar() {
               sx={{
                 color: "#fff",
                 fontWeight: "bold",
-                border: "1px solid #62D2A2",
+                border: "1px solid #fff",
                 ml: 2,
                 "&:hover": {
                   backgroundColor: "#62D2A2",
-                  color: "#000",
+                  color: "#fff",
                 },
               }}
             >

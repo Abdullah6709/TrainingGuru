@@ -8,6 +8,8 @@ import Register from '../page/public/Register';
 import Contact from '../page/public/Contact'
 import About from "../page/public/About";
 import AllCourses from "../page/public/AllCourses";
+import SingUp from "../page/public/SingUp";
+import LogIn from "../page/public/LogIn";
 
 
 const routers = createBrowserRouter([
@@ -49,6 +51,14 @@ const routers = createBrowserRouter([
         {
             path:"/allcourses",
             element:<AllCourses />
+        },
+        {
+            path:"/signup",
+            element:<SingUp/>
+        },
+        {
+            path:"/login",
+            element:<LogIn/>
         }
 
         ],
