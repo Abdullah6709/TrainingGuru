@@ -10,6 +10,7 @@ import About from "../page/public/About";
 import AllCourses from "../page/public/AllCourses";
 import SingUp from "../page/public/SingUp";
 import LogIn from "../page/public/LogIn";
+import CourseDetail from "../page/public/CourseDetail"
 
 
 const routers = createBrowserRouter([
@@ -52,6 +53,10 @@ const routers = createBrowserRouter([
             path:"/allcourses",
             element:<AllCourses />
         },
+         {
+            path:"/coursedetail/:id",
+            element: <CourseDetail />,
+          },
         {
             path:"/signup",
             element:<SingUp/>

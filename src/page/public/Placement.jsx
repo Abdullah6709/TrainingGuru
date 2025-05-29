@@ -10,15 +10,20 @@ const Placement = () => {
           Placement Process
         </Typography>
       </Box>
-      <Box
-        component="img"
-        src={place}
-        alt="Placement"
-        sx={{
-          width: "100%",
-          height:"auto"
-        }}
-      ></Box>
+      <Box mt={-2}>
+        <Box
+          component="img"
+          src={place}
+          alt="Placement"
+          sx={{
+            display: "block",
+            mx: "auto", // centers the image horizontally
+            width: "100%",
+            maxWidth: "1200px", // prevents it from becoming too large
+            height: "auto",
+          }}
+        />
+      </Box>
     </>
   );
 };

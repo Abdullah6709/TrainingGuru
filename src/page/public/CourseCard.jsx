@@ -14,19 +14,19 @@ import { useNavigate } from 'react-router-dom';
 const courses = [
   {
     title: 'Master in Java Development',
-    icon: <img src="src/assets/svg/java.svg" alt="Java Icon" width={34} />,
+    icon: <img src="src/assets/svg/java.svg" alt="Java Icon" width={50} />,
   },
   {
     title: 'Master in React Development',
-    icon: <img src="src/assets/react.svg" alt="React Icon" width={34} />,
+    icon: <img src="src/assets/react.svg" alt="React Icon" width={50} />,
   },
   {
-    title: 'Master in App Development',
-    icon: <img src="src/assets/svg/mobileap.svg" alt="Mobile App Icon" width={34} />,
+    title: 'Master in Apps Development',
+    icon: <img src="src/assets/svg/mobileap.svg" alt="Mobile App Icon" width={50} />,
   },
   {
     title: 'Master in Python Development',
-    icon: <img src="src/assets/svg/python.svg" alt="Python Icon" width={34} />,
+    icon: <img src="src/assets/svg/python.svg" alt="Python Icon" width={50} />,
   },
 ];
 
@@ -47,7 +47,7 @@ const CourseCards = () => {
     >
       <Container maxWidth="lg">
         {/* Cards Section */}
-        <Grid container spacing={6} justifyContent="center">
+        <Grid container spacing={2} justifyContent="center">
           {courses.map((course, index) => (
             <Grid size={{xs:12, sm:6, md:3}} key={index}>
               <Card
@@ -64,18 +64,8 @@ const CourseCards = () => {
                   },
                 }}
               >
-                <CardContent>
-                  <Avatar
-                    sx={{
-                      bgcolor: '#e3f2fd',
-                      width: 50,
-                      height: 50,
-                      mx: 'auto',
-                      mb: 1.5,
-                    }}
-                  >
+                <CardContent >
                     {course.icon}
-                  </Avatar>
                   <Typography variant="subtitle1" fontWeight={600} gutterBottom>
                     {course.title}
                   </Typography>

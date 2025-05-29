@@ -12,9 +12,7 @@ import {
   ListItemButton,
   ListItemText,
   Toolbar,
-  Typography,
   Button,
-  Stack,
   useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -112,6 +110,7 @@ function PublicAppBar() {
           height: { xs: "80px", sm: "100px", md: "60px", lg: "90px" },
           display: "flex",
           justifyContent: "center",
+          boxShadow:'none'
         }}
       >
         <Toolbar
@@ -180,12 +179,10 @@ function PublicAppBar() {
               sx={{
                 color: "#fff",
                 fontWeight: "bold",
-                border: "1px solid #fff",
+               // border: "1px solid #fff",
                 ml: 2,
-                "&:hover": {
-                  backgroundColor: "#62D2A2",
-                  color: "#fff",
-                },
+
+               
               }}
             >
               Login
@@ -196,10 +193,11 @@ function PublicAppBar() {
               sx={{
                 color: "#fff",
                 fontWeight: "bold",
-                backgroundColor: "#62D2A2",
+                backgroundColor: "#198754",
+                borderRadius:"40px",
                 ml: 1,
                 "&:hover": {
-                  backgroundColor: "#52C8B2",
+                  backgroundColor: "#198770",
                 },
               }}
             >

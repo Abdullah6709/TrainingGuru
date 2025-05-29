@@ -33,7 +33,7 @@ const Banner = () => {
                 xs: "2rem", // small screens
                 sm: "2.5rem",
                 md: "3rem",
-                lg: "3.5rem",
+                lg: "3rem",
               },
               fontWeight: "bold",
               lineHeight: 1.2,
@@ -45,7 +45,7 @@ const Banner = () => {
             for creative people.
           </Typography>
 
-          <Typography variant="body2" gutterBottom>
+          <Typography variant="h6" gutterBottom color="#ffffff80">
             Learn from expert professionals and <br />
             join the largest online community for creatives.
           </Typography>
@@ -55,8 +55,8 @@ const Banner = () => {
             <TextField
               fullWidth
               variant="outlined"
-              label="What courses do you need?"
-              placeholder="Search courses..."
+             // label="What courses do you need?"
+              placeholder="What courses do you need?"
               size="medium"
               InputProps={{
                 startAdornment: (
