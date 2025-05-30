@@ -3,11 +3,11 @@ import {
   Grid,
   Typography,
   TextField,
-  InputAdornment,
-} from "@mui/material";
+  InputAdornment, 
+} from "@mui/material";  
 import SearchIcon from "@mui/icons-material/Search";
-import React from "react";
-import MYIMG from "../../assets/images/banner/bnr.png";
+import React from "react";           
+import MYIMG from "../../assets/images/banner/bnr copy.png";     
 
 const Banner = () => {
   return (
@@ -15,7 +15,7 @@ const Banner = () => {
       sx={{
         flexGrow: 1,
         p: 4,
-        mt: 10,
+        mt: 0,
         py: 5,
         px: { xs: 2, sm: 3, md: 12, lg: 12 },
         backgroundColor: "#0d6efd",
@@ -30,13 +30,14 @@ const Banner = () => {
             gutterBottom
             sx={{
               fontSize: {
-                xs: "2rem", // small screens
-                sm: "2.5rem",
-                md: "3rem",
+                xs: "1rem", // small screens
+                sm: "1.5rem",
+                md: "2rem",
                 lg: "3rem",
               },
               fontWeight: "bold",
               lineHeight: 1.2,
+              mt: 2,
               textAlign: { xs: "center", sm: "left" },
             }}
           >
@@ -45,45 +46,58 @@ const Banner = () => {
             for creative people.
           </Typography>
 
-          <Typography variant="h6" gutterBottom color="#ffffff80">
+          <Typography variant="body" color="#ffffff80" mt={2} gutterBottom>
             Learn from expert professionals and <br />
             join the largest online community for creatives.
           </Typography>
 
           {/* Search Bar with Search Icon */}
-          <Box sx={{ mt: 3 }}>
-            <TextField
-              fullWidth
-              variant="outlined"
-             // label="What courses do you need?"
-              placeholder="What courses do you need?"
-              size="medium"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon sx={{ color: "white" }} />
-                  </InputAdornment>
-                ),
-                style: { color: "white" }, // Input text color
-              }}
-              InputLabelProps={{
-                style: { color: "white" }, // Label color
-              }}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": {
-                    borderColor: "white",
-                  },
-                  "&:hover fieldset": {
-                    borderColor: "white",
-                  },
-                  "&.Mui-focused fieldset": {
-                    borderColor: "white",
-                  },
-                },
-              }}
-            />
-          </Box>
+         <Box sx={{ mt: 5, backgroundColor: "#fff" }}>
+  <TextField
+    fullWidth
+    variant="outlined"
+    label="What courses do you need?"
+    placeholder="Search courses..."
+    size="medium"
+    InputProps={{
+      endAdornment: (
+        <InputAdornment position="end">
+          <SearchIcon
+            sx={{
+              color: "white",
+              backgroundColor: "#157347",
+              padding: "4px",
+              borderRadius: "5px",
+              border: "1px solid #157347",
+              width: "60px",
+              height: "45px",
+            }}
+          />
+        </InputAdornment>
+      ),
+    }}
+    InputLabelProps={{
+      style: { color: "black" }, // Label color
+    }}
+    sx={{
+      "& input": {
+        color: "black", // ✅ THIS sets the input text color
+      },
+      "& .MuiOutlinedInput-root": {
+        "& fieldset": {
+          borderColor: "white",
+        },
+        "&:hover fieldset": {
+          borderColor: "white",
+        },
+        "&.Mui-focused fieldset": {
+          borderColor: "white",
+        },
+      },
+    }}
+  />
+</Box>
+
         </Grid>
 
         {/* Image on the Right */}
@@ -97,9 +111,10 @@ const Banner = () => {
               maxWidth: "500px",
               display: "block",
               ml: "auto",
-              border: "1px 2px 3px 4px solid white",
-              borderRadius: "8px",
-              boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
+              // border: "1px 2px 3px 4px solid white",
+              // borderRadius: "8px",
+              // boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
+              mt: 7,
             }}
           />
         </Grid>
@@ -109,3 +124,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+

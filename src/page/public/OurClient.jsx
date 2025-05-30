@@ -16,7 +16,6 @@ const OurClient = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
-  // Client logos data with unique IDs
   const clients = [
     { id: 1, name: "Client 1", logo: logo1 },
     { id: 2, name: "Client 2", logo: logo2 },
@@ -26,118 +25,101 @@ const OurClient = () => {
     { id: 6, name: "Client 6", logo: logo6 },
   ];
 
+  // duplicated array to allow seamless scrolling
+  const doubled = [...clients, ...clients];
+
+  // Common sx for each row container
+  const rowContainerSx = {
+    display: "flex",
+    overflow: "hidden",
+    position: "relative",
+    width: "100%",
+    "&:hover .client-row": {
+      animationPlayState: "paused",
+    },
+    mb: 2, // space between rows
+  };
+
+  // Common sx for the animated inner box
+  const rowInnerSx = {
+    display: "flex",
+    animation: "scroll 20s linear infinite",
+    "@keyframes scroll": {
+      "0%": { transform: "translateX(0)" },
+      "100%": { transform: "translateX(-50%)" },
+    },
+  };
+
+  const logoBoxSx = {
+    flexShrink: 0,
+    px: { xs: 2, sm: 4 },
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: isMobile ? 120 : isTablet ? 160 : 180,
+    height: isMobile ? 40 : isTablet ? 40 : 60,
+    transition: "all 0.3s ease",
+    "& img": {
+      maxWidth: "80%",
+      maxHeight: "80%",
+      opacity: 0.8,
+      transition: "all 0.3s ease",
+      objectFit: "contain",
+    },
+    "&:hover": {
+      transform: "translateY(-5px)",
+      "& img": {
+        filter: "grayscale(0%)",
+        opacity: 1,
+        transform: "scale(1.1)",
+      },
+    },
+  };
+
   return (
-<>
-     <Box textAlign="center" py={2}>
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
-                Our Clients
-              </Typography>
-              </Box>
-    <Box
-      py={2}
-      sx={{
-        background: "linear-gradient(to bottom,rgb(8, 13, 73),rgb(8,13,73))",
-        position: "relative",
-        "&:before": {
-          content: '""',
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: { xs: "3px", sm: "1px" },
-        },
-      }}
-    >
+    <>
+      <Box textAlign="center" py={2}>
+        <Typography variant="h4" fontWeight="bold" gutterBottom>
+          Our Clients
+        </Typography>
+      </Box>
       <Box
+        py={2}
         sx={{
+          background: "rgb(8, 13, 73)",
           position: "relative",
-          maxWidth: "1400px",
-          mx: "auto",
-          py: 1,
-          "&:before, &:after": {
-            content: '""',
-            position: "absolute",
-            top: 0,
-            bottom: 0,
-            width: { xs: "50px", sm: "100px" },
-            zIndex: 2,
-          },
-          "&:before": {
-            left: 0,
-            background: "linear-gradient(to right, rgb(8,13,73) 0%, rgba(8,13,73) 100%)",
-          },
-          "&:after": {
-            right: 0,
-            background: "linear-gradient(to left, rgb(8,13,73) 0%, rgba(8,13,73) 100%)",
-          },
         }}
       >
+        {/* First row: scroll left */}
+        <Box sx={rowContainerSx}>
+          <Box className="client-row" sx={rowInnerSx}>
+            {doubled.map((client, idx) => (
+              <Box key={client.id + "-" + idx} sx={logoBoxSx}>
+                <img src={client.logo} alt={client.name} loading="lazy" />
+              </Box>
+            ))}
+          </Box>
+        </Box>
 
-       
-        <Box
-          sx={{
-            display: "flex",
-            overflow: "hidden",
-            position: "relative",
-            width: "100%",
-            "&:hover": {
-              "& .client-logo": {
-                animationPlayState: "paused",
-              },
-            },
-          }}
-        >
+        {/* Second row: scroll right (reverse) */}
+        <Box sx={rowContainerSx}>
           <Box
+            className="client-row"
             sx={{
-              display: "flex",
-              animation: "scroll 20s linear infinite",
-              "@keyframes scroll": {
-                "0%": { transform: "translateX(0)" },
-                "100%": { transform: "translateX(-50%)" },
-              },
+              ...rowInnerSx,
+              animationDirection: "reverse",
             }}
-            className="client-logo"
           >
-            {/* First set */}
-            {[...clients, ...clients].map((client, index) => (
-              <Box
-                key={`${client.id}-${index}`}
-                sx={{
-                  flexShrink: 0,
-                  px: { xs: 2, sm: 4 }, // Adjust padding for mobile and tablet
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: isMobile ? 120 : isTablet ? 160 : 180, // Responsively adjust width
-                  height: isMobile ? 80 : isTablet ? 100 : 120, // Adjust height for mobile/tablet
-                  transition: "all 0.3s ease",
-                  "& img": {
-                    maxWidth: "80%",
-                    maxHeight: "80%",
-                    opacity: 0.8,
-                    transition: "all 0.3s ease",
-                    objectFit: "contain",
-                  },
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    "& img": {
-                      filter: "grayscale(0%)",
-                      opacity: 1,
-                      transform: "scale(1.1)",
-                    },
-                  },
-                }}
-              >
+            {doubled.map((client, idx) => (
+              <Box key={client.id + "-" + idx + "-rev"} sx={logoBoxSx}>
                 <img src={client.logo} alt={client.name} loading="lazy" />
               </Box>
             ))}
           </Box>
         </Box>
       </Box>
-    </Box>
     </>
   );
 };
-
 
 export default OurClient;
