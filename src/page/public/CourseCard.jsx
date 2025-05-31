@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Grid,
@@ -8,64 +8,87 @@ import {
   Button,
   Avatar,
   Container,
-} from '@mui/material';
-import { useNavigate } from 'react-router-dom'; 
+} from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
+// Import SVGs as URLs
+import javaIcon from "../../assets/svg/java.svg";
+import reactIcon from "../../assets/svg/rct.svg";
+import mobileAppIcon from "../../assets/svg/mobileap.svg";
+import pythonIcon from "../../assets/svg/python.svg";
 
 const courses = [
   {
-    title: 'Master in Java Development',
-    icon: <img src="src/assets/svg/java.svg" alt="Java Icon" width={50} />,
+    title: "Master in Java Development",
+    icon: javaIcon,
   },
   {
-    title: 'Master in React Development',
-    icon: <img src="src/assets/react.svg" alt="React Icon" width={50} />,
+    title: "Master in React Development",
+    icon: reactIcon,
   },
   {
-    title: 'Master in Apps Development',
-    icon: <img src="src/assets/svg/mobileap.svg" alt="Mobile App Icon" width={50} />,
+    title: "Master in App Development",
+    icon: mobileAppIcon,
   },
   {
-    title: 'Master in Python Development',
-    icon: <img src="src/assets/svg/python.svg" alt="Python Icon" width={50} />,
+    title: "Master in Python Development",
+    icon: pythonIcon,
   },
 ];
 
 const CourseCards = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSeeAllCourses = () => {
-    navigate('/allcourses'); 
+    navigate("/allcourses");
   };
 
   return (
     <Box
       sx={{
-        backgroundColor: '#f5f5f5',
+        backgroundColor: "#f5f5f5",
         py: 5,
         px: { xs: 2, sm: 3, md: 12, lg: 12 },
       }}
     >
       <Container maxWidth="lg">
-        {/* Cards Section */}
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={6} justifyContent="center">
           {courses.map((course, index) => (
-            <Grid size={{xs:12, sm:6, md:3}} key={index}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
               <Card
                 sx={{
                   height: 200,
-                  textAlign: 'center',
+                  textAlign: "center",
                   p: 1,
                   boxShadow: 2,
                   borderRadius: 2,
-                  backgroundColor: '#fff',
-                  '&:hover': {
-                    transform: 'scale(1.02)',
-                    transition: '0.3s',
+                  backgroundColor: "#fff",
+                  "&:hover": {
+                    transform: "scale(1.02)",
+                    transition: "0.3s",
                   },
                 }}
               >
-                <CardContent >
-                    {course.icon}
+                <CardContent>
+                  <Avatar
+                    sx={{
+                      bgcolor: "#e3f2fd",
+                      width: 50,
+                      height: 50,
+                      mx: "auto",
+                      mb: 1.5,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      overflow: "visible",
+                    }}
+                  >
+                    <img
+                      src={course.icon}
+                      alt={`${course.title} icon`}
+                      style={{ width: 24, height: 24 }}
+                    />
+                  </Avatar>
                   <Typography variant="subtitle1" fontWeight={600} gutterBottom>
                     {course.title}
                   </Typography>
@@ -79,7 +102,6 @@ const CourseCards = () => {
         </Grid>
       </Container>
 
-      {/* Footer CTA Section */}
       <Box textAlign="center" mt={6}>
         <Typography variant="h4" gutterBottom>
           Our Popular Courses

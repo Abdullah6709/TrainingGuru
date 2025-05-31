@@ -32,28 +32,29 @@ export default function CourseDetailPage() {
   }
 
   return (
-    <Box sx={{ maxWidth: 1000, mx: 'auto', p: 3, mt: { xs: 8, md: 15 } }}>
+    <Box sx={{ maxWidth: 1100, mx: 'auto', p: 3, mt: { xs: 8, md: 15 } }}>
       {/* Header Card */}
       <Card
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           boxShadow: 6,
-          borderRadius: 3,
+          borderRadius: 0,
           mb: 6,
           
         }}
       >
-        <CardMedia
-          component="img"
-          image={course.img}
-          alt={course.title}
-          sx={{
-            width: { xs: '100%', md: 400 },
-            height: { xs: 200, md: 'auto' },
-            objectFit: 'cover',
-          }}
-        />
+     <CardMedia
+  component="img"
+  image={course.img}
+  alt={course.title}
+  sx={{
+    width: { xs: '100%', md: 400 },
+    height: 'auto',
+    objectFit: 'fill',  // Shows entire image without cropping
+    backgroundColor: 'rgba(0,0,0,0.08)',  // Adds background color for letterboxing
+  }}
+/>
         <Box sx={{ flex: 1, p: 3 }}>
           <CardContent>
             <Typography variant="h4" fontWeight={600} gutterBottom>

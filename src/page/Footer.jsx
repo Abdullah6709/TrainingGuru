@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 import {
   Box,
   Typography,
@@ -9,10 +10,37 @@ import {
 } from "@mui/material";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
 import Nav from "../assets/images/navbar/tg_logo.png";
+
 const Footer = () => {
-  const handleClick = () => {
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
     navigate("/");
   };
+
+  // Quick Links data
+  const quickLinks = [
+    { text: "Home", path: "/" },
+    { text: "Courses", path: "/allcourses" },
+    { text: "Scholarships", path: "/getscholarship" },
+    { text: "Contact", path: "/contact" },
+  ];
+
+  // Popular Courses data
+  const popularCourses = [
+    { text: "Full Stack Development", path: "#" },
+    { text: "Python with AI", path: "#" },
+    { text: "React & Node.js", path: "#" },
+    { text: "MERN Stack", path: "#" },
+  ];
+
+  // Social Media links
+  const socialMedia = [
+    { icon: Facebook, url: "https://facebook.com" },
+    { icon: Twitter, url: "https://twitter.com" },
+    { icon: Instagram, url: "https://instagram.com" },
+    { icon: LinkedIn, url: "https://linkedin.com" },
+  ];
 
   return (
     <Box
@@ -38,25 +66,28 @@ const Footer = () => {
           </Typography>
 
           <Box
-            onClick={handleClick}
+            onClick={handleLogoClick}
             display="flex"
             alignItems="center"
             mt={3}
             gap={2}
+            sx={{ cursor: "pointer" }}
           >
             <img src={Nav} alt="Logo" style={{ height: 60 }} />
           </Box>
         </Grid>
+
         {/* Quick Links */}
         <Grid item xs={12} md={2.4}>
           <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
             Quick Links
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            {["Home", "Courses", "Scholarships", "Contact"].map((text) => (
+            {quickLinks.map((link) => (
               <Link
-                key={text}
-                href="#"
+                key={link.text}
+                component={RouterLink}
+                to={link.path}
                 color="inherit"
                 underline="hover"
                 sx={{
@@ -66,7 +97,7 @@ const Footer = () => {
                   },
                 }}
               >
-                {text}
+                {link.text}
               </Link>
             ))}
           </Box>
@@ -78,11 +109,13 @@ const Footer = () => {
             Follow Us
           </Typography>
           <Box sx={{ display: "flex", gap: 2 }}>
-            {[Facebook, Twitter, Instagram, LinkedIn].map((Icon, index) => (
+            {socialMedia.map((social, index) => (
               <IconButton
                 key={index}
                 color="inherit"
-                href="#"
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
                   bgcolor: "rgba(255, 255, 255, 0.1)",
                   "&:hover": {
@@ -90,7 +123,7 @@ const Footer = () => {
                   },
                 }}
               >
-                <Icon fontSize="small" />
+                <social.icon fontSize="small" />
               </IconButton>
             ))}
           </Box>
@@ -116,15 +149,11 @@ const Footer = () => {
             Popular Courses
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            {[
-              "Full Stack Development",
-              "Python with AI",
-              "React & Node.js",
-              "MERN Stack",
-            ].map((course) => (
+            {popularCourses.map((course) => (
               <Link
-                key={course}
-                href="#"
+                key={course.text}
+                component={RouterLink}
+                to={course.path}
                 color="inherit"
                 underline="hover"
                 sx={{
@@ -134,7 +163,7 @@ const Footer = () => {
                   },
                 }}
               >
-                {course}
+                {course.text}
               </Link>
             ))}
           </Box>
