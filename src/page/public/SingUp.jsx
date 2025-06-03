@@ -16,13 +16,13 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 const SignupForm = () => {
   return (
-    <Grid container component="main" sx={{ minHeight: '100vh', mt: { xs: 2, sm: 5 }, mr: { md: 15 } }}>
+    <Grid container  component="main" sx={{ minHeight: '100vh', mt: { xs: 2, md: 15 }, mr: { md: 15 } }}>
       {/* Left Section */}
       <Grid
       size={{xs:12, sm:6, md:7}}
        
         sx={{
-          backgroundColor: '#f8f9fb',
+         // backgroundColor: '#f8f9fb',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -66,7 +66,7 @@ const SignupForm = () => {
             Create Account
           </Typography>
 
-          {/* Social Signups */}
+       
           <Button fullWidth variant="outlined" startIcon={<GoogleIcon />} sx={{ mb: 1 }}>
             Sign up with Google
           </Button>

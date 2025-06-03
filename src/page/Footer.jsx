@@ -48,10 +48,11 @@ const Footer = () => {
       sx={{
         bgcolor: "#0d6efd",
         color: "#fff",
-        mt: "auto",
+       // mt: "auto",
         pt: 6,
         pb: 4,
         px: { xs: 3, md: 10 },
+        mt:"20px "
       }}
     >
       <Grid container spacing={5}>

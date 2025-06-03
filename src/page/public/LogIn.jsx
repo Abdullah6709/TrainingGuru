@@ -16,15 +16,13 @@ import GoogleIcon from '@mui/icons-material/Google';
 
 const AdminLogin = () => {
   return (
-    <Grid container component="main" sx={{ minHeight: '100vh', mt: { xs: 2, sm: 5 } }}>
+    <Grid container spacing component="main" sx={{ minHeight: '100vh', mt: { xs: 10, sm: 15 } }}>
       {/* Left Section */}
       <Grid
-        item
-        xs={12}
-        sm={6}
-        md={7}
+      size={{xs:12, sm:6, md:7}}
+       
         sx={{
-          backgroundColor: '#f8f9fb',
+        //  backgroundColor: '#f8f9fb',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -51,7 +49,7 @@ const AdminLogin = () => {
       </Grid>
 
       {/* Right Section */}
-      <Grid item xs={12} sm={6} md={5} component={Paper} elevation={6} square>
+      <Grid size={{xs:12, sm:6, md:5}} component={Paper} elevation={6} square>
         <Box
           sx={{
             my: { xs: 4, sm: 8 },

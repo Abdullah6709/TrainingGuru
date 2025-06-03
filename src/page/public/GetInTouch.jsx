@@ -27,20 +27,20 @@ const GetInTouch = () => {        // ms.................
           </Typography>
 
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{xs:12, sm:6}}>
               <TextField fullWidth label="Your Name" variant="outlined" />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{xs:12, sm:6}}>
               <TextField fullWidth label="Your Email" variant="outlined" />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{xs:12, sm:6}}>
               <TextField fullWidth label="Your Contact Number" variant="outlined" />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{xs:12, sm:6}}>
               <TextField fullWidth label="Course" variant="outlined" />
             </Grid>
-            <Grid item xs={12}>
-              <TextField fullWidth label="Message" variant="outlined" multiline rows={5} />
+            <Grid size={{xs:12, sm:12}}>
+              <TextField fullWidth label="Message" variant="outlined" multiline rows={5}  />
             </Grid>
             {/* <Grid item xs={12} md={6}>
               <Button variant="contained" color="primary">
