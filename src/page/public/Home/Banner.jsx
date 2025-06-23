@@ -77,11 +77,11 @@ const Banner = () => {
       ),
     }}
     InputLabelProps={{
-      style: { color: "black" }, // Label color
+      style: { color: "black" }, 
     }}
     sx={{
       "& input": {
-        color: "black", // ✅ THIS sets the input text color
+        color: "black", 
       },
       "& .MuiOutlinedInput-root": {
         "& fieldset": {

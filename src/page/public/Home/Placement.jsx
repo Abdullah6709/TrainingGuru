@@ -17,9 +17,9 @@ const Placement = () => {
           alt="Placement"
           sx={{
             display: "block",
-            mx: "auto", // centers the image horizontally
+            mx: "auto", 
             width: "100%",
-            maxWidth: "1200px", // prevents it from becoming too large
+            maxWidth: "1200px", 
             height: "auto",
           }}
         />

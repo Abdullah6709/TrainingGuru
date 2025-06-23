@@ -13,7 +13,7 @@ const Number = () => {
   return (
     <Box
       sx={{
-        backgroundColor: 'blue',
+        backgroundColor: '#0d6efd',
         py: 5,
         px: { xs: 2, sm: 3, md: 12, lg: 12 },
       }}
