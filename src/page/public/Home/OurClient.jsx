@@ -4,12 +4,12 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 // Import your logo images
-import logo1 from '../../assets/images/client/img1.png';
-import logo2 from '../../assets/images/client/img2.png';
-import logo3 from '../../assets/images/client/img3.png';
-import logo4 from '../../assets/images/client/img4.png';
-import logo5 from '../../assets/images/client/img5.png';
-import logo6 from '../../assets/images/client/img6.png';
+import logo1 from '../../../assets/images/client/img1.png';
+import logo2 from '../../../assets/images/client/img2.png';
+import logo3 from '../../../assets/images/client/img3.png';
+import logo4 from '../../../assets/images/client/img4.png';
+import logo5 from '../../../assets/images/client/img5.png';
+import logo6 from '../../../assets/images/client/img6.png';
 
 const OurClient = () => {
   const theme = useTheme();

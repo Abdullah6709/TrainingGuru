@@ -107,7 +107,7 @@ function PublicAppBar() {
           background: "#0d6efd",
           position: "fixed",
           zIndex: 1100,
-          height: { xs: "80px", sm: "100px", md: "60px", lg: "90px" },
+          height: "60px",
           display: "flex",
           justifyContent: "center",
           boxShadow:'none'

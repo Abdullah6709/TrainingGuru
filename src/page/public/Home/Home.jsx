@@ -1,11 +1,12 @@
 import React from 'react'
 import {Typography} from "@mui/material";
-import Banner from './Banner';
-import CourseCards from './CourseCard';
-import Number from './Number';
-import PopularShortTerms from './PopularShortTerms';
-import OurClient from './OurClient';
-import Placement from './Placement';
+import Banner from '../Home/Banner';
+import CourseCards from '../Home/CourseCard';
+import Number from '../Home/Number';
+import PopularShortTerms from '../Home/PopularShortTerms';
+import OurClient from '../Home/OurClient';
+import Placement from '../Home/Placement';
+
 
 const Home = () => {
   return (

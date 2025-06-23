@@ -39,7 +39,7 @@ const DemoPage = () => {
   return (
     <Box>
       {/* Registration Section */}
-      <Box sx={{ background: "linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b)", py: 5, mt: 10 }}>
+      <Box sx={{ background: "linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b)", py: 5, mt: 5 }}>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
             {/* Left Text and Buttons */}

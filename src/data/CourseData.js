@@ -12,10 +12,11 @@
  import C12 from '../assets/images/courses/native.png';
  
  const CourseData = [
+
   {
-    id: 1,
+    id:  1,
     img: C1,
-    title: "Core Java Development",
+    title:"Core Java Development",
     description:
       "This Core Java Development course builds fundamental programming skills essential for software development and career growth.",
     category: "Java Courses",
@@ -32,6 +33,7 @@
     id: 2,
     img: C2,
     title: "Advance Java Development",
+  
     description:
       "Advanced Java course enhances an individual's skills, employability, and potential for higher salaries.",
     category: "Java Courses",

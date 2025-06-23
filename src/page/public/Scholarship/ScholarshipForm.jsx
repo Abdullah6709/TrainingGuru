@@ -9,7 +9,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import scholarshipImg from '../../assets/images/form/167794.jpg';
+import scholarshipImg from '../../../assets/images/form/167794.jpg';
 
 const ScholarshipForm = () => {
   const [education, setEducation] = React.useState('');

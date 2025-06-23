@@ -1,16 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PublicRouter from './routes/PublicRoutes';
-import Home from '../page/public/Home';
-import Getscholarship from '../page/public/Getscholarship';
-import Certificate from '../page/public/Certificate';
-import Career from '../page/public/Career';
-import Register from '../page/public/Register';
-import Contact from '../page/public/Contact'
-import About from "../page/public/About";
-import AllCourses from "../page/public/AllCourses";
+import Home from '../page/public/Home/Home';
+import Getscholarship from '../page/public/Scholarship/Getscholarship';
+import Certificate from '../page/public/Certificate/Certificate';
+import Register from '../page/public/Register/Register';
+import Contact from '../page/public/Contact/Contact'
+import About from "../page/public/About/About";
+import AllCourses from "../page/public/Courses/AllCourses";
 import SingUp from "../page/public/SingUp";
 import LogIn from "../page/public/LogIn";
-import CourseDetail from "../page/public/CourseDetail"
+import CourseDetail from "../page/public/Courses/CourseDetail"
 
 
 const routers = createBrowserRouter([
@@ -36,10 +35,6 @@ const routers = createBrowserRouter([
             element: <About />
         },
         {
-            path:"/career",
-            element:<Career />
-        },
-        {
             path:"/register",
             element:<Register />
         },
@@ -54,7 +49,7 @@ const routers = createBrowserRouter([
             element:<AllCourses />
         },
          {
-            path:"/coursedetail/:id",
+            path:"/allcourses/coursedetail/:slug",
             element: <CourseDetail />,
           },
         {

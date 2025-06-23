@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import v1 from '../../assets/images/vision/mission.webp';
+import v1 from '../../../assets/images/vision/mission.webp';
 
 function Mission() {
   return (

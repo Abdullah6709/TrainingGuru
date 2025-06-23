@@ -11,11 +11,10 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-// Import SVGs as URLs
-import javaIcon from "../../assets/svg/java.svg";
-import reactIcon from "../../assets/svg/rct.svg";
-import mobileAppIcon from "../../assets/svg/mobileap.svg";
-import pythonIcon from "../../assets/svg/python.svg";
+import javaIcon from "../../../assets/svg/java.svg";
+import reactIcon from "../../../assets/svg/rct.svg";
+import mobileAppIcon from "../../../assets/svg/mobileap.svg";
+import pythonIcon from "../../../assets/svg/python.svg";
 
 const courses = [
   {

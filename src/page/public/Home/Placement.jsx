@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import place from '../../assets/images/client/process.webp';
+import place from '../../../assets/images/client/process.webp';
 
 const Placement = () => {
   return (

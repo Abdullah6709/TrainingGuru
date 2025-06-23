@@ -4,7 +4,7 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
-import InfoCards from './InfoCard';      // ms.................
+import InfoCards from '../Contact/InfoCard';  
 
 const contactOptions = [
   {

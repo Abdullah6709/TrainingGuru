@@ -7,7 +7,7 @@ import {
 } from "@mui/material";  
 import SearchIcon from "@mui/icons-material/Search";
 import React from "react";           
-import MYIMG from "../../assets/images/banner/bnr copy.png";     
+import MYIMG from "../../../assets/images/banner/bnr copy.png";     
 
 const Banner = () => {
   return (

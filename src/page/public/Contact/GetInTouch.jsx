@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Typography, TextField, Button, Box } from '@mui/material';
-const GetInTouch = () => {        // ms.................
+const GetInTouch = () => {        
   return (
     <Box sx={{ p: 5, overflowX: 'auto' }}>
       <Box
