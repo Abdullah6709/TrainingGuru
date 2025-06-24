@@ -52,7 +52,7 @@ const Footer = () => {
         pt: 6,
         pb: 4,
         px: { xs: 3, md: 10 },
-        mt:"20px "
+        // mt:"20px "
       }}
     >
       <Grid container spacing={5}>
@@ -138,7 +138,10 @@ const Footer = () => {
           <Typography variant="body2" sx={{ lineHeight: 1.8 }}>
             📍 A-45, Sector 2, Noida, UP
             <br />
-            📞 +91 9876543210
+            📞 +91 1204099066
+            <br />
+             
+            📞 +91 8178898506
             <br />
             ✉️ info@trainingguru.in
           </Typography>

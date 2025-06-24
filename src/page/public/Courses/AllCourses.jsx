@@ -90,7 +90,7 @@ const AllCourses = () => {
       : courses.filter((course) => course.category === selectedCategory);
 
   return (
-    <Box sx={{ px: 2, mx: { xs: 1, sm: 2, md: 10 }, mt: 13 }}>
+    <Box sx={{ px: 2, mx: { xs: 1, sm: 2, md: 10 }, mt: 13, mb:2 }}>
       <Grid container spacing={2}>
         <Grid size={{xs:12, md:2}} >
           <Paper

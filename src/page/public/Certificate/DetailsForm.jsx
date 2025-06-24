@@ -4,8 +4,6 @@ import {
   Button,
   TextField,
   Typography,
-  Container,
-  Paper,
   Grid,
 } from "@mui/material";
 import { useFormik } from "formik";
@@ -38,6 +36,7 @@ const DetailsForm = () => {
           bgcolor: "#f0f0f0",
           mb: 5,
           mt: 5,
+        
         }}
       >
         <Typography variant="h5" gutterBottom>

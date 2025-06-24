@@ -19,6 +19,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Nav from '../assets/images/navbar/tg_logo.png';
 
 const drawerWidth = 240;
+
 const navItems = [
    { label: "Home", path: "/" },
   { label: "All Courses", path: "/allcourses" },
